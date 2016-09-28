@@ -1,0 +1,16 @@
+// частотный анализ
+#include <iostream>
+#include <string>
+int main()
+{
+  std::string name;
+  std::cout << "enter ENGLISH letters? ";
+  getline (std::cin, name);
+  for(int i=65;i<=90;i++)
+  {
+      int k=0;
+      for(int j=0;j<name.length();j++)
+                if(name[j]==(char)(i)) k++; 
+      if(k>0) std::cout << (char)(i)<<" - ["<<k<<"]"<<"\n"; 
+  }
+}
